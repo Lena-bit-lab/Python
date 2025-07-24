@@ -3,6 +3,6 @@ from user import User
 my_user = User('L', 'Z')
 
 
-print(my_user.get_first_name())
-print(my_user.get_last_name())
-print(my_user.get_user_info())
+print(my_user.first_name())
+print(my_user.last_name())
+print(my_user.first_name(), my_user.last_name ())
