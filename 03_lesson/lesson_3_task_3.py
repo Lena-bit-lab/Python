@@ -2,7 +2,7 @@ from address import Address
 from mailing import Mailing
 
 to_address = Address('111111', 'Москва', 'Садовая', '1', '2')
-from_address = Address ('222222', 'Москва', 'Заречная', '3', '4')
+from_address = Address('222222', 'Москва', 'Заречная', '3', '4')
 
 mailing = Mailing(to_address, from_address, 100, "ABC")
 
