@@ -4,7 +4,11 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
 
+    def p_first_name(self):
+        print(self.first_name)
 
-print("first_name")
-print("last_mame")
-print("first_name", "last_name")
+    def p_last_name(self):
+        print(self.last_name)
+
+    def p_full_name(self):
+        print(f'{self.first_name}-{self.last_name}')
