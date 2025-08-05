@@ -49,9 +49,17 @@ def test_contains_positive(input_str, symbol, expected):
     assert string_utils.contains(input_str, symbol) == expected
 
 
+# @pytest.mark.negative
+# @pytest.mark.parametrize("input_str, symbol, expected", [
+#     ("Skypro", "S", False),
+# ])
+# def test_contains_negative(input_str, symbol, expected):
+#     assert string_utils.contains(input_str, symbol) == expected
+
+
 @pytest.mark.negative
 @pytest.mark.parametrize("input_str, symbol, expected", [
-    ("Skypro", "S", False),
+    ("Skypro", "M", False),
 ])
 def test_contains_negative(input_str, symbol, expected):
     assert string_utils.contains(input_str, symbol) == expected
@@ -65,9 +73,17 @@ def test_delete_symbol_positive(input_str, symbol, expected):
     assert string_utils.delete_symbol(input_str, symbol) == expected
 
 
+# @pytest.mark.negative
+# @pytest.mark.parametrize("input_str, symbol, expected", [
+#     ("Skypro", "k", "Skypro"),
+# ])
+# def test_delete_symbol_negative(input_str, symbol, expected):
+#     assert string_utils.delete_symbol(input_str, symbol) == expected
+
+
 @pytest.mark.negative
 @pytest.mark.parametrize("input_str, symbol, expected", [
-    ("Skypro", "k", "Skypro"),
+    ("Skypro", "m", "Skypro"),
 ])
 def test_delete_symbol_negative(input_str, symbol, expected):
     assert string_utils.delete_symbol(input_str, symbol) == expected
