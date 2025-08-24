@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 # from selenium.common.exceptions import TimeoutException
 
 from selenium.webdriver.edge.service import Service as EdgeService
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
+
 
 def test_fill_form():
     edge_driver_path = r"C:\Users\User\Desktop\msedgedriver.exe"
@@ -35,8 +35,3 @@ def test_fill_form():
     for pole in poles:
         pole_class = driver.find_element(By.CSS_SELECTOR, pole).get_attribute("class")
         assert pole_class == "alert py-2 alert-success"
-
-# try:
-#     element = WebDriverWait(driver, 10).untilEC.presence_of_element_located((By.ID, "zip-code")))
-# except TimeoutException:
-    #print("Элемент не найден в течение указанного времени ожидания")
