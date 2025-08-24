@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 def test_purchase():
     driver = webdriver.Firefox()
     driver.get("https://www.saucedemo.com/")
@@ -20,12 +21,9 @@ def test_purchase():
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "inventory_item")))
 
 # Добавление товаров в корзину
-    backpack_add_button = driver.find_element(By.XPATH,
-                                                  "//div[@class='inventory_item' and .//div[contains(text(), 'Sauce Labs Backpack')]]//button")
-    tshirt_add_button = driver.find_element(By.XPATH,
-                                                "//div[@class='inventory_item' and .//div[contains(text(), 'Sauce Labs Bolt T-Shirt')]]//button")
-    onesie_add_button = driver.find_element(By.XPATH,
-                                                "//div[@class='inventory_item' and .//div[contains(text(), 'Sauce Labs Onesie')]]//button")
+    backpack_add_button = driver.find_element(By.XPATH, "//div[@class='inventory_item' and .//div[contains(text(), 'Sauce Labs Backpack')]]//button")
+    tshirt_add_button = driver.find_element(By.XPATH, "//div[@class='inventory_item' and .//div[contains(text(), 'Sauce Labs Bolt T-Shirt')]]//button")
+    onesie_add_button = driver.find_element(By.XPATH, "//div[@class='inventory_item' and .//div[contains(text(), 'Sauce Labs Onesie')]]//button")
 
     backpack_add_button.click()
     tshirt_add_button.click()
@@ -59,6 +57,5 @@ def test_purchase():
 
 # Проверка итоговой суммы
     assert total_cost_value == 58.29, f"Итоговая сумма должна быть 58.29, получена {total_cost_value}"
-
 
     driver.quit()
