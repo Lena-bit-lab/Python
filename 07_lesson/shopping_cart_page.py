@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 
 class ShoppingCartPage:
     def __init__(self, driver):
@@ -17,5 +16,3 @@ class ShoppingCartPage:
 
         cart_link = driver.find_element(By.CLASS_NAME, "shopping_cart_link")
         cart_link.click()
-
-

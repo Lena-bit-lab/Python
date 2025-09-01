@@ -1,6 +1,5 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class FormPage:
@@ -8,7 +7,7 @@ class FormPage:
         # options = webdriver.ChromeOptions()
         # driver = webdriver.Chrome(options=options)
         self.driver = driver
-        self.wait = WebDriverWait(driver, 10)
+        self.wait = WebDriverWait(driver, 50)
 
     def open(self):
         self.driver.get("https://bonigarcia.dev/selenium-webdriver-java/slow-calculator.html")
