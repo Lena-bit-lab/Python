@@ -1,4 +1,4 @@
-n = int(input('Введите целое чмсло: '))
+n = int(input('Введите целое число: '))
 
 
 def fizz_buzz(n):
